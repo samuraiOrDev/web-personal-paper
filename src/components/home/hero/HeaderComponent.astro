@@ -1,0 +1,38 @@
+---
+
+---
+
+<header>
+  <div class="title">
+    <h1>VINTAGE OLD NEWSPAPER</h1>
+  </div>
+  <div class="text">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti
+      praesentium, est quisquam tenetur quae deserunt nam provident tempora
+      laudantium illo odit voluptatibus, omnis natus, nostrum nihil perferendis
+    </p>
+    <div class="block">Lorem, ipsum dolor</div>
+  </div>
+</header>
+
+<style>
+  header {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    & .text {
+      & .block {
+        margin-top: 10px;
+        color: var(--color-light-beige);
+        background-color: var(--color-gray-dark-v2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        height: 50px;
+      }
+    }
+  }
+</style>

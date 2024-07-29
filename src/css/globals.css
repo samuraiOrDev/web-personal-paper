@@ -1,0 +1,192 @@
+@import url('reset.css');
+@font-face {
+  font-family: 'Bodoni';
+  src: url('fonts/bodoni/BodoniXT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CaslonAntique';
+  src: url('fonts/caslon-antique/CaslonAntique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CaslonAntique';
+  src: url('fonts/caslon-antique/CaslonAntique-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CaslonAntique';
+  src: url('fonts/caslon-antique/CaslonAntique-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CaslonAntique';
+  src: url('fonts/caslon-antique/CaslonAntique-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'KremlinGeogian';
+  src: url('fonts/kremlin-georgian/KremlinGeogian.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OldNewPapers';
+  src: url('fonts/old-newspaper/OldNewspaperTypes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vintage;
+  src: url('fonts/Vintage.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Chomsky;
+  src:
+    url("fonts/chomsky.woff2") format("woff2"),
+    url("fonts/chomsky.woff") format("woff"),
+    url("fonts/chomsky.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src:
+    url("fonts/libre-baskerville.woff2") format("woff2"),
+    url("fonts/libre-baskerville.woff") format("woff"),
+    url("fonts/libre-baskerville.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "League Gothic";
+  src:
+    url("fonts/league-gothic.woff2") format("woff2"),
+    url("fonts/league-gothic.woff") format("woff"),
+    url("fonts/league-gothic.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  src:
+    url("fonts/linux-libertine.woff2") format("woff2"),
+    url("fonts/linux-libertine.woff") format("woff"),
+    url("fonts/linux-libertine.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --color-black: #000;
+  --color-gray-dark: rgb(74, 73, 74);
+  --color-gray-dark-v2: #49484a;
+  --color-gray-dark-v3: #2f2f2f;
+
+  --color-light-beige: rgb(249, 242, 230);
+  --color-light-beige-v2: rgb(249, 241, 229);
+  --color-light-beige-v3: rgb(249, 242, 229);
+  --color-dark-beige: rgb(200, 192, 180);
+  
+  --color-medium-orange: rgb(242, 180, 130);
+  --color-dark-orange: rgb(217, 110, 60);
+  --color-dark-reddish-orange: rgb(179, 60, 30);
+
+  --color-medium-brown: rgb(205, 195, 180);
+  --color-dark-brown: rgb(150, 130, 110);
+  --color-dark-reddish-brown: rgb(120, 90, 60);
+
+  --lineal-gradient-paper: linear-gradient(
+      to bottom, 
+      var(--color-light-beige), 
+      var(--color-light-beige-v2), 
+      var(--color-light-beige-v3), 
+      var(--color-medium-brown), 
+      var(--color-dark-brown), 
+      var(--color-dark-reddish-brown)
+  );
+
+  /* Fonts */
+  --font-family-bodoni: 'Bodoni';
+  --font-caslon-antique: 'CaslonAntique';
+  --font-kremlin-georgian: 'KremlinGeogian';
+  --font-old-newspaper: 'OldNewPapers';
+  --font-chomsky: Chomsky;
+
+  --bg-primary: var(--color-gray-dark);
+  --text-color: var(--color-gray-dark);
+  --accent: 136, 58, 234;
+
+  /* Container */
+  --width-container: 1024px;
+  --height-container: 1200px;
+  --m-top: 40px;
+  --p-container: 20px;
+}
+
+
+html {
+  font-family: var(--font-old-newspaper);
+  background-color: var(--bg-primary);
+ 
+}
+
+
+body {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+.container {
+  position: relative;
+  height: var(--height-container);
+  width: var(--width-container);
+  margin-top: var(--m-top);
+  padding: var(--p-container);
+  background-color: var(--color-light-beige);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px var(--color-dark-brown);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container::after,
+.container::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-light-beige);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px var(--color-dark-reddish-brown);
+}
+.container::before {  
+  top: -10px;
+  left: -10px;
+}
+
+.container::after {
+  bottom: -10px;
+  right: -10px;  
+} 
+
+h1 {
+  font-size: 6.1rem;
+  line-height: 1;
+  text-align: start;
+
+  font-family: Vintage;
+}
+
