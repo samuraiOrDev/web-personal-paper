@@ -1,0 +1,49 @@
+---
+import BarStarsComponent from "../hero/BarStarsComponent.astro";
+---
+
+<div class="container-text-two">
+  <div class="header-text">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos magni
+    </p>
+  </div>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem nostrum
+    veniam quis, fugiat blanditiis deserunt dolore velit fuga, laboriosam
+  </p>
+  <BarStarsComponent numberStart={3} />
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem nostrum
+    veniam quis, fugiat blanditiis deserunt dolore velit fuga, laboriosam
+  </p>
+  <BarStarsComponent numberStart={3} />
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem nostrum
+    veniam quis, fugiat blanditiis deserunt dolore velit fuga, laboriosam
+  </p>
+</div>
+
+<style>
+  .container-text-two {
+    & .header-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & p {
+        font-size: 1.1rem;
+        padding: 5px 5px;
+        line-height: 1;
+        text-align: center;
+        font-family: var(--font-family-bodoni);
+        background-color: var(--color-gray-dark-v2);
+        color: var(--color-light-beige);
+      }
+    }
+    & p {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+</style>

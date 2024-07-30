@@ -158,8 +158,6 @@ body {
   padding: var(--p-container);
   background-color: var(--color-light-beige);
   box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px var(--color-dark-brown);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .container::after,
@@ -186,7 +184,6 @@ h1 {
   font-size: 6.1rem;
   line-height: 1;
   text-align: start;
-
   font-family: Vintage;
 }
 

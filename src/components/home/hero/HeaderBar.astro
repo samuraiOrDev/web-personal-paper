@@ -10,12 +10,17 @@
   <div></div>
 </div>
 <style>
+  :root {
+    --px-20: 20px;
+    --px-2: 2px;
+    --px-1: 1px;
+  }
   .bar-header {
-    height: 20px;
+    height: var(--px-20);
     & div {
-      height: 2px;
+      height: var(--px-2);
       background-color: var(--color-gray-dark-v2);
-      margin-top: 1px;
+      margin-top: var(--px-1);
     }
   }
 </style>

@@ -1,0 +1,59 @@
+---
+import BlockTextComponent from "./content/BlockTextComponent.astro";
+import BlockTextTwoComponent from "./content/BlockTextTwoComponent.astro";
+import BlockZeppelinComponent from "./content/BlockZeppelinComponent.astro";
+---
+
+<main class="main-content">
+  <div class="block-1">
+    <BlockZeppelinComponent />
+  </div>
+  <div class="block-2">
+    <BlockTextComponent />
+  </div>
+  <div class="block-3">
+    <BlockTextTwoComponent />
+  </div>
+  <div class="block-4">Bloque 4</div>
+</main>
+
+<style>
+  :root {
+    --px-10: 10px;
+    --px-20: 20px;
+    --px-400: 400px;
+    --px-350: 350px;
+    --px-450: 450px;
+  }
+  .main-content {
+    margin-top: var(--px-20);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--px-10);
+    & div {
+      &.block-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: var(--px-400);
+      }
+      &.block-2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        height: var(--px-400);
+      }
+      &.block-3 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        height: var(--px-350);
+      }
+      &.block-4 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        height: var(--px-450);
+        margin-top: -50px;
+        background-color: yellowgreen;
+      }
+    }
+  }
+</style>

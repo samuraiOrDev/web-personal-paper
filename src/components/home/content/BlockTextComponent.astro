@@ -1,0 +1,62 @@
+---
+import BarStarsComponent from "../hero/BarStarsComponent.astro";
+import HeaderBar from "../hero/HeaderBar.astro";
+---
+
+<div class="container-text">
+  <div class="item-1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam atque et,
+    sequi dolor qui eum accusantium totam, iste a dolore quos eius accusamus,
+    odio inventore. Molestiae optio voluptates similique nihil! Dolor debitis
+    iure dolores voluptatem quibusdam quam eveniet architecto illo dignissimos a
+    dicta fuga sequi, ipsam, animi ea quaerat sunt. Consequuntur aliquam
+    incidunt repellat eligendi culpa? Earum laboriosam saepe quia. Quisquam
+    ipsum error dolorem laborum aspernatur reprehenderit voluptate.
+  </div>
+  <div class="item-2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam atque et,
+    sequi dolor qui eum accusantium totam, iste a dolore quos eius accusamus,
+    odio inventore. Molestiae optio voluptates similique nihil! Dolor debitis
+    iure dolores voluptatem quibusdam quam eveniet architecto illo dignissimos a
+    dicta fuga sequi, ipsam, animi ea quaerat sunt. Consequuntur aliquam
+    incidunt repellat eligendi culpa? Earum laboriosam saepe quia. Quisquam
+    ipsum error dolorem laborum aspernatur reprehenderit voluptate.
+  </div>
+  <div class="item-3">
+    <h3>ADHUC DE GLORATUR SCEVOLAR</h3>
+    <HeaderBar />
+    <p>15,6 - 78</p>
+    <BarStarsComponent numberStart={10} />
+    <p style="margin-top: 5px; margin-bottom: 20px;">
+      <b style="font-style: italic;">Lorem ipsum dolor</b> sit amet consectetur adipisicing
+      elit. Molestiae
+    </p>
+    <h3 class="second-h3">ADHUC DE GLORATUR SCEVOLAR</h3>
+  </div>
+</div>
+
+<style>
+  .container-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    & .item-3 {
+      & h3 {
+        font-size: 2rem;
+        line-height: 1;
+        text-align: center;
+        font-family: var(--font-family-bodoni);
+        font-weight: bold;
+        margin-top: -5px;
+        margin-bottom: 5px;
+      }
+      & p {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      & .second-h3 {
+        line-height: 1.5;
+      }
+    }
+  }
+</style>

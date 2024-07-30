@@ -17,21 +17,26 @@
 </header>
 
 <style>
+  :root {
+    --px-20: 20px;
+    --px-10: 10px;
+    --px-50: 50px;
+  }
   header {
     display: grid;
-    margin-top: 20px;
+    margin-top: var(--px-20);
     grid-template-columns: 3fr 1fr;
-    gap: 20px;
+    gap: var(--px-20);
     & .text {
       & .block {
-        margin-top: 10px;
+        margin-top: var(--px-10);
         color: var(--color-light-beige);
         background-color: var(--color-gray-dark-v2);
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        height: 50px;
+        height: var(--px-50);
       }
     }
   }

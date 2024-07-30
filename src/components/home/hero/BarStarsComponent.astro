@@ -1,13 +1,24 @@
 ---
-
+interface Props {
+  numberStart?: number;
+}
+const { numberStart } = Astro.props as Props;
 ---
 
-<div class="bar-start"></div>
-<style>
+<div class:list={["bar-start", numberStart ? "custom" : "default"]}></div>
+<style define:vars={{ numberStart }}>
+  :root {
+    --px-20: 20px;
+  }
   .bar-start {
-    height: 20px;
+    height: var(--px-20);
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><polygon fill="rgb(74, 73, 74)" points="12,17.27 18.18,21 15.64,13.97 22,9.24 14.47,9.24 12,2 9.53,9.24 2,9.24 8.36,13.97 5.82,21"/></svg>');
     background-repeat: repeat-x;
-    background-size: auto 20px;
+  }
+  .custom {
+    background-size: calc(100% / var(--numberStart)) var(--px-20);
+  }
+  .default {
+    background-size: auto var(--px-20);
   }
 </style>

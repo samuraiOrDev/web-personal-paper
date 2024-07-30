@@ -10,10 +10,15 @@
   </p>
 </div>
 <style>
+  :root {
+    --px-20: 20px;
+    --px-5: 5px;
+    --px-50: 50px;
+  }
   .sub-header {
     position: relative;
-    height: 50px;
-    margin-top: 20px;
+    height: var(--px-50);
+    margin-top: var(--px-20);
     background-color: var(--color-gray-dark-v2);
     display: flex;
     align-items: center;
@@ -24,7 +29,7 @@
     content: "";
     bottom: -10px;
     position: absolute;
-    height: 5px;
+    height: var(--px-5);
     width: 100%;
     left: 0;
     background-color: var(--color-gray-dark-v2);
