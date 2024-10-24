@@ -1,0 +1,53 @@
+---
+---
+
+<div class="container-text">
+  <div class="item-1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam atque et,
+    sequi dolor qui eum accusantium totam, iste a dolore quos eius accusamus,
+    odio inventore. Molestiae optio voluptates similique nihil! Dolor debitis
+    iure dolores voluptatem quibusdam quam eveniet architecto illo dignissimos a
+    dicta fuga sequi, ipsam, animi ea quaerat sunt. Consequuntur aliquam
+    incidunt repellat eligendi culpa? Earum laboriosam saepe quia. Quisquam
+    ipsum error dolorem laborum aspernatur reprehenderit voluptate.
+  </div>
+  <div class="item-2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam atque et,
+    sequi dolor qui eum accusantium totam, iste a dolore quos eius accusamus,
+    odio inventore. Molestiae optio voluptates similique nihil! Dolor debitis
+    iure dolores voluptatem quibusdam quam eveniet architecto illo dignissimos a
+    dicta fuga sequi, ipsam, animi ea quaerat sunt. Consequuntur aliquam
+    incidunt repellat eligendi culpa? Earum laboriosam saepe quia. Quisquam
+    ipsum error dolorem laborum aspernatur reprehenderit voluptate.
+  </div>
+  <div class="header-text">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos magni
+    </p>
+  </div>
+</div>
+
+<style>
+  .container-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 0.5rem;
+    & .header-text {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 1 / 3;
+      & p {
+        font-size: 1.1rem;
+        padding: 5px 5px;
+        line-height: 1;
+        text-align: center;
+        font-family: var(--font-family-bodoni);
+        background-color: var(--color-gray-dark-v2);
+        color: var(--color-light-beige);
+      }
+    }
+  }
+</style>
